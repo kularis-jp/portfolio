@@ -118,6 +118,24 @@ a:hover {
     margin-bottom: 15px;
 }
 
+/* About Meセクション内のプロジェクトリストのスタイル */
+.about-me-projects {
+    list-style: none; /* デフォルトのリストマークを削除 */
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px; /* 下の段落との間隔 */
+    text-align: left; /* 左寄せ */
+}
+
+.about-me-projects li {
+    margin-bottom: 10px; /* 各項目間の間隔 */
+    font-size: 1.05em; /* フォントサイズを少し大きく */
+}
+
+.about-me-projects li a {
+    font-weight: bold; /* リンクを強調 */
+}
+
 /* Project Grid */
 .project-grid {
     display: grid;
