@@ -3,46 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Keita's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Creating stylish and modern web experiences.</p>
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="site-title">Keita</h1>
+            <nav class="social-links">
+                <a href="https://x.com/keita_kularis" target="_blank" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/keitakuramoto/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://note.com/kularis" target="_blank" aria-label="Note"><i class="fas fa-sticky-note"></i></a>
+                <a href="https://github.com/your-github-username" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </nav>
+        </div>
     </header>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I am a web developer passionate about design and user experience.</p>
-    </section>
+    <main class="main-content">
+        <section id="about" class="section about-me">
+            <div class="container">
+                <div class="about-me-content">
+                    <img src="https://via.placeholder.com/150" alt="Your Profile Picture" class="profile-pic">
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p>こんにちは！Keitaです。Web開発とUI/UXデザインに情熱を注いでいます。新しい技術を学ぶこと、そしてユーザーにとって使いやすいプロダクトを作ることに日々挑戦しています。</p>
+                        <p>現在は〇〇株式会社に在籍し、△△プロジェクトに参画中です。これまでの経験を活かし、チームで協力しながらより良いサービスを開発することを目指しています。</p>
+                        </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>Short description of project one.</p>
+        <section id="current-projects" class="section current-projects">
+            <div class="container">
+                <h2>Current Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card current">
+                        <span class="wip-badge">WIP</span>
+                        <img src="https://via.placeholder.com/300x200" alt="Project 1 Thumbnail">
+                        <h3>プロジェクトA (開発中)</h3>
+                        <p>〇〇を解決するためのWebアプリケーションを開発中。フロントエンドはReact、バックエンドはNode.jsを使用。</p>
+                        <a href="#" class="btn" target="_blank">詳細を見る</a>
+                    </div>
+                    <div class="project-card current">
+                        <span class="wip-badge">WIP</span>
+                        <img src="https://via.placeholder.com/300x200" alt="Project 2 Thumbnail">
+                        <h3>プロジェクトB (デザイン進行中)</h3>
+                        <p>UI/UX改善を目的としたモバイルアプリのデザインを担当。Figmaでプロトタイプを作成中。</p>
+                        <a href="#" class="btn" target="_blank">詳細を見る</a>
+                    </div>
+                    </div>
             </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>Short description of project two.</p>
+        </section>
+
+        <section id="past-projects" class="section past-projects">
+            <div class="container">
+                <h2>Past Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 3 Thumbnail">
+                        <h3>プロジェクトC (ECサイト構築)</h3>
+                        <p>企業向けECサイトのフロントエンド開発を担当。Vue.jsとNuxt.jsを使用。</p>
+                        <a href="#" class="btn" target="_blank">詳細を見る</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 4 Thumbnail">
+                        <h3>プロジェクトD (ブログサイト作成)</h3>
+                        <p>個人ブログサイトをWordPressで構築。カスタムテーマ開発とSEO対策を実施。</p>
+                        <a href="#" class="btn" target="_blank">詳細を見る</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 5 Thumbnail">
+                        <h3>プロジェクトE (データ可視化ツール)</h3>
+                        <p>D3.jsを用いたデータ可視化ツールの開発。複雑なデータをインタラクティブに表示。</p>
+                        <a href="#" class="btn" target="_blank">詳細を見る</a>
+                    </div>
+                    </div>
             </div>
-            <div class="project-card">
-                <h3>Project Three</h3>
-                <p>Short description of project three.</p>
-            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Keita. All rights reserved.</p>
         </div>
-    </section>
-
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>You can reach me via <a href="mailto:example@example.com">email</a>.</p>
-    </section>
-
-    <footer>
-        &copy; 2024 My Portfolio. All rights reserved.
     </footer>
 </body>
 </html>
