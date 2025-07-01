@@ -1,53 +1,228 @@
-* {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    line-height: 1.6;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-header.hero {
-    background: linear-gradient(to right, #8360c3, #2ebf91);
-    color: white;
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+h1, h2, h3 {
     text-align: center;
-    padding: 4rem 1rem;
+    color: #333;
+    margin-bottom: 30px;
 }
 
-header.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-section {
-    padding: 2rem 1rem;
+a:hover {
+    text-decoration: underline;
 }
 
-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #2ebf91;
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
+.btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+.site-title {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+.social-links a {
+    font-size: 1.8em; /* Make icons larger */
+    margin-left: 15px;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transform for hover effect */
+}
+
+.social-links a:hover {
+    color: #007bff; /* Change color on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* About Me Section */
+.about-me {
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: column; /* Default to column for small screens */
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #eee;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    max-width: 700px;
+    text-align: left; /* Align text to left within its container */
+}
+
+.about-text h2 {
+    text-align: left; /* Align section title to left */
+    margin-bottom: 15px;
+}
+
+/* Project Grid */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .project-card {
-    background: #fafafa;
-    padding: 1rem;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative; /* For WIP badge positioning */
 }
 
-footer {
-    background: #f4f4f4;
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card h3 {
+    font-size: 1.4em;
+    margin: 15px 0 10px;
+    padding: 0 15px;
+}
+
+.project-card p {
+    font-size: 0.95em;
+    color: #666;
+    padding: 0 15px 15px;
+}
+
+/* Current Projects Specific Styles */
+.current-projects {
+    background-color: #fcf8f3; /* Slightly different background for current projects */
+}
+
+.project-card.current {
+    border: 2px solid #ffc107; /* Highlight border */
+}
+
+.wip-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffc107;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .about-me-content {
+        flex-direction: row; /* Row layout for larger screens */
+        text-align: left;
+    }
+
+    .profile-pic {
+        margin-right: 40px; /* Space between image and text */
+    }
+
+    .about-text h2 {
+        text-align: center; /* Center section title on larger screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .site-title {
+        margin-bottom: 15px;
+    }
+    .social-links {
+        margin-top: 10px;
+    }
+    .social-links a {
+        margin: 0 8px; /* Adjust spacing for smaller screens */
+    }
+    .about-text {
+        text-align: center; /* Center text on small screens */
+    }
+    .about-text h2 {
+        text-align: center; /* Center section title on small screens */
+    }
 }
